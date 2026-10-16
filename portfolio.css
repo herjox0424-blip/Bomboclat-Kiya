@@ -696,3 +696,114 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+/* =====================================
+   KiYa - Mobile Responsive Adjustments
+   ===================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Keep the background looking good on phones */
+    body {
+        background-attachment: scroll;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* Hero section */
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+        overflow-wrap: anywhere;
+    }
+
+    .hero-photo {
+        position: static;
+        display: block;
+        width: min(100%, 320px);
+        height: auto;
+        max-height: 420px;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    /* About section */
+    .about {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .about-photo {
+        display: block;
+        width: min(100%, 320px);
+        height: auto;
+        max-height: 420px;
+        margin: 0 auto;
+    }
+
+    /* Personality and favorites cards */
+    .personality-grid,
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Nursing and work sections */
+    .nursing,
+    .work {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .nursing-photo {
+        display: block;
+        width: min(100%, 320px);
+        height: auto;
+        max-height: 420px;
+        margin: 0 auto;
+    }
+
+    /* Make page sections fit smaller screens */
+    .hero,
+    .about,
+    .personality,
+    .favorites,
+    .nursing,
+    .work,
+    .closing {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    /* Prevent long text from stretching the layout */
+    p,
+    h1,
+    h2,
+    h3 {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Extra adjustments for very narrow phones */
+@media screen and (max-width: 420px) {
+
+    .hero,
+    .about,
+    .personality,
+    .favorites,
+    .nursing,
+    .work,
+    .closing {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+}
