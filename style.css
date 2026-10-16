@@ -467,3 +467,26 @@ footer {
         display: none !important;
     }
 }
+
+/* Responsive homepage portraits: prevent overlap */
+@media screen and (min-width: 769px) and (max-width: 1500px) {
+    .homepage-photo {
+        left: 2%;
+        width: clamp(150px, 20vw, 280px);
+        height: clamp(240px, 34vw, 430px);
+    }
+
+    .homepage-photo-right {
+        right: 2%;
+        width: clamp(150px, 20vw, 280px);
+        height: clamp(220px, 31vw, 400px);
+    }
+}
+
+/* Narrow windows: hide side portraits before they collide */
+@media screen and (min-width: 769px) and (max-width: 1050px) {
+    .homepage-photo,
+    .homepage-photo-right {
+        display: none;
+    }
+}
