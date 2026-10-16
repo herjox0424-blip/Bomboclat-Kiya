@@ -392,3 +392,78 @@ footer {
     z-index: 3;
 }
 /* Trigger GitHub Pages redeployment */
+
+/* Mobile layout fixes */
+@media screen and (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        padding: 16px;
+    }
+
+    header,
+    main,
+    footer {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px 18px;
+        margin: 20px auto;
+        overflow-wrap: anywhere;
+    }
+
+    .intro-card h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .intro-card p,
+    .intro-card h2 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .socials {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 0;
+        gap: 12px;
+    }
+
+    .socials a,
+    .more-button {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .homepage-photo,
+    .homepage-photo-right {
+        width: min(42vw, 220px);
+        height: 280px;
+        margin: 12px auto;
+    }
+}
+
+/* Mobile: keep decorative portraits out of the way */
+@media screen and (max-width: 768px) {
+    .homepage-photo,
+    .homepage-photo-right,
+    .homepage-photo-back,
+    .homepage-photo-right-back {
+        display: none !important;
+    }
+}

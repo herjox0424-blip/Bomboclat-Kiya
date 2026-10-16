@@ -807,3 +807,225 @@ body {
         font-size: clamp(2rem, 9vw, 3rem);
     }
 }
+
+/* ===== MOBILE LAYOUT FIX ===== */
+@media screen and (max-width: 768px) {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .portfolio {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    /* Hero */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+        padding: 24px 18px;
+        gap: 24px;
+    }
+
+    .hero-text {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+        line-height: 0.95;
+        overflow-wrap: normal;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        line-height: 1.7;
+    }
+
+    .hero-photo-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .hero-photo {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+    }
+
+    /* About section */
+    .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        width: 100%;
+        min-width: 0;
+        margin-top: 24px;
+    }
+
+    .about-intro,
+    .about-photo-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about-intro {
+        padding: 22px 18px;
+    }
+
+    .about-photo {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    /* Section headings */
+    .section-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .section-heading h2,
+    .about-intro h2,
+    .ick-card h2,
+    .love-card h2 {
+        font-size: clamp(1.6rem, 7vw, 2.3rem);
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    /* Personality cards */
+    .personality-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .trait-card {
+        width: 100%;
+        min-width: 0;
+        padding: 22px 18px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Favorites */
+    .favorites-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .ick-card,
+    .love-card {
+        width: 100%;
+        min-width: 0;
+        padding: 22px 18px;
+        overflow-wrap: anywhere;
+    }
+
+    .love-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Nursing and skills */
+    .work-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .nursing-card,
+    .skills-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+        padding: 22px 18px;
+        gap: 18px;
+    }
+
+    .nursing-copy {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .nursing-photo {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+    /* Closing section */
+    .closing-card {
+        width: 100%;
+        min-width: 0;
+        padding: 32px 18px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .closing-card h2 {
+        font-size: clamp(1.8rem, 8vw, 2.8rem);
+        line-height: 1.2;
+    }
+
+    /* Prevent long content from forcing overflow */
+    .portfolio img {
+        max-width: 100%;
+    }
+
+    .portfolio p,
+    .portfolio h1,
+    .portfolio h2,
+    .portfolio h3,
+    .portfolio a,
+    .portfolio span {
+        overflow-wrap: anywhere;
+    }
+
+    .pill-link {
+        display: inline-flex;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+    }
+}
