@@ -362,3 +362,23 @@ footer {
     z-index: -1;
     opacity: 0.85;
 }
+
+/* Mobile adjustments for homepage portraits */
+@media screen and (max-width: 768px) {
+    .homepage-photo,
+    .homepage-photo-right {
+        position: relative;
+        display: block;
+        left: auto;
+        right: auto;
+        top: auto;
+        width: min(42vw, 220px);
+        height: 300px;
+        margin: 16px auto;
+        transform: none;
+    }
+
+    .homepage-photo-back {
+        display: none;
+    }
+}
