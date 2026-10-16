@@ -382,3 +382,40 @@ footer {
         display: none;
     }
 }
+
+/* Fix homepage photos overlapping the text */
+.homepage-photo,
+.homepage-photo-right {
+    width: clamp(150px, 18vw, 260px);
+    height: clamp(220px, 30vw, 380px);
+    z-index: 0;
+}
+
+.homepage-photo {
+    left: clamp(10px, 5vw, 80px);
+}
+
+.homepage-photo-right {
+    right: clamp(10px, 5vw, 80px);
+}
+
+.homepage-photo-back {
+    width: min(55vw, 650px);
+    height: auto;
+    max-height: 380px;
+    left: 50%;
+    top: 37%;
+    transform: translate(-50%, -50%) rotate(-13deg);
+    opacity: 0.25;
+}
+
+@media screen and (max-width: 900px) {
+    .homepage-photo,
+    .homepage-photo-right {
+        display: none;
+    }
+
+    .homepage-photo-back {
+        display: none;
+    }
+}
